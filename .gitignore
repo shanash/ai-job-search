@@ -121,3 +121,19 @@ company_research/*.json
 
 # Brainstorm mockups (superpowers visual companion) - never ship
 .superpowers/
+
+# Filled-in candidate profile (this clone only - never commit).
+# These files are tracked upstream, so .gitignore alone does not protect them:
+# the real guards are `git update-index --skip-worktree` on each file plus a
+# local .git/hooks/pre-commit that blocks staging them. The entries below
+# document intent and catch a fresh re-add after `git rm --cached`.
+/CLAUDE.md
+/.claude/skills/job-application-assistant/01-candidate-profile.md
+/.claude/skills/job-application-assistant/02-behavioral-profile.md
+/.claude/skills/job-application-assistant/03-writing-style.md
+/.claude/skills/job-application-assistant/04-job-evaluation.md
+/.claude/skills/job-application-assistant/05-cv-templates.md
+/.claude/skills/job-application-assistant/06-cover-letter-templates.md
+/.claude/skills/job-application-assistant/07-interview-prep.md
+/cv/main_example.tex
+/.claude/skills/job-scraper/search-queries.md
