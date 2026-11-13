@@ -303,7 +303,7 @@ If the user decides to apply to any job, the tracker row is written by **job-app
 
 1. **Never fabricate job postings.** Only present jobs from actual CLI search/detail output or WebSearch/WebFetch results.
 2. **Respect deduplication.** Always check job_scraper/seen_jobs.json AND job_search_tracker.csv before presenting.
-3. **Focus on configured geographic area.** Skip jobs that require relocation or are clearly outside commute range.
+3. **Focus on configured geographic area.** Skip jobs that require relocation or are clearly outside commute range, unless the Location Filter in `search-queries.md` explicitly accepts that area (e.g. overseas roles with no location limit). The Location Filter is the source of truth for which locations pass.
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
 5. **Be efficient with detail fetches.** Don't run `detail` or WebFetch on every search hit — pre-filter by title/snippet, then fetch only promising matches.
 6. **Parallel searches.** Run portal CLI searches in parallel; use WebSearch only for gaps the CLIs don't cover.
